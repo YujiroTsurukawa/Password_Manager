@@ -19,9 +19,9 @@ while true ; do
   "Get Password" )
      echo "サービス名を入力してください:"; read get_password   
      
-     if find $get_password.txt.asc; then
+     if find $get_password.txt.asc &> /dev/null ; then
      
-        $(gpg $get_password.txt.asc)
+        $(gpg $get_password.txt.asc) &>> /dev/null
         
         array=($(cat $get_password.txt))
         const=("サービス名:${array[0]}" "ユーザー名:${array[1]}" "パスワード:${array[2]}")
