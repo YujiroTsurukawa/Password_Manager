@@ -21,7 +21,7 @@ while true ; do
      
      if find $get_password.txt.asc &> /dev/null ; then
      
-        $(gpg $get_password.txt.asc) &>> /dev/null
+        $(gpg $get_password.txt.asc)
         
         array=($(cat $get_password.txt))
         const=("サービス名:${array[0]}" "ユーザー名:${array[1]}" "パスワード:${array[2]}")
