@@ -19,7 +19,7 @@ while true ; do
   "Get Password" )
      echo "サービス名を入力してください:"; read get_password   
      
-     if find $get_password.txt.asc; then
+     if find $get_password.txt.asc &> /dev/null ; then
      
         $(gpg $get_password.txt.asc)
         

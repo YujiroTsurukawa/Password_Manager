@@ -1,3 +1,3 @@
 # Password_Manager
 
-復号化パス：pass
+GnuPG復号化パス：pass
